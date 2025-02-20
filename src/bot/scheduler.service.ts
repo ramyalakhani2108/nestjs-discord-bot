@@ -9,7 +9,7 @@ export class SchedulerService {
 
   constructor(private readonly client: Client) {}
 
-  @Cron(CronExpression.EVERY_10_MINUTES) // Runs every 24 hours at 00:00 UTC
+  @Cron(CronExpression.EVERY_10_MINUTES ) // Runs every 24 hours at 00:00 UTC
   async sendDailyMessages() {
     this.logger.log('⏰ Running daily scheduled task...');
 
