@@ -15,8 +15,8 @@ export class SchedulerService {
 
     // List of channels and the users to mention in each channel
     const messageTargets = [
-      // { channelId: '1340003785166032966', userId: '1293243416838410322' }, // User 1 in Channel 1
-      { channelId: '1340004234208350258', userId: 'USER_ID_2' }, // User 2 in Channel 2
+      { channelId: '1340003785166032966', userId: '1293243416838410322' }, // User 1 in Channel 1
+      // { channelId: '1340004234208350258', userId: 'USER_ID_2' }, // User 2 in Channel 2
     ];
 
     for (const target of messageTargets) {
