@@ -1,19 +1,16 @@
 import { Module } from '@nestjs/common';
-import { NecordModule } from 'necord';
 import { ConfigModule } from '@nestjs/config';
+import { ScheduleModule } from '@nestjs/schedule';
 import { PingCommand } from './ping.command';
 import { SchedulerService } from './scheduler.service';
-import { ScheduleModule } from '@nestjs/schedule';
+import { ListenersModule } from 'src/listenrs/listenrs.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot(),
-    NecordModule.forRoot({
-      token: process.env.DISCORD_TOKEN ?? '', // Make sure this is correct
-      intents: ['Guilds', 'GuildMessages', 'MessageContent'],
-    }),
     ScheduleModule.forRoot(),
+    ListenersModule
   ],
-  providers: [PingCommand, SchedulerService], // Register the command class
+  providers: [PingCommand, SchedulerService],
 })
 export class BotModule {}

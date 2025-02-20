@@ -16,7 +16,7 @@ export class SchedulerService {
     // List of channels and the users to mention in each channel
     const messageTargets = [
       { channelId: '1340003785166032966', userId: '1293243416838410322' }, // User 1 in Channel 1
-      // { channelId: '1340004234208350258', userId: 'USER_ID_2' }, // User 2 in Channel 2
+      { channelId: '1340004234208350258', userId: '1159466299747999854' }, // User 2 in Channel 2
     ];
 
     for (const target of messageTargets) {
@@ -30,7 +30,7 @@ export class SchedulerService {
         }
 
         const mention = `<@${userId}>`;
-        const message = `Hello ${mention}! 👋 Don't forget to check in today!`;
+        const message = `Hello ${mention}! 👋 Hope you're having a great day! Don't forget to check in on your new tasks and update your progress here before signing off. Let's stay on top of our goals! 🚀💪`;
 
         await channel.send(message);
         this.logger.log(`✅ Sent daily message to ${mention} in channel ${channelId}`);
