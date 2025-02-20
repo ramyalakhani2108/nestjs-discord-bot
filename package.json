@@ -27,6 +27,7 @@
     "@nestjs/platform-express": "^11.0.1",
     "@nestjs/schedule": "^5.0.1",
     "@nestjs/websockets": "^11.0.10",
+    "crypto": "^1.0.1",
     "discord.js": "^14.18.0",
     "necord": "^6.8.7",
     "nestjs-dynamic-providers": "^0.3.7",
