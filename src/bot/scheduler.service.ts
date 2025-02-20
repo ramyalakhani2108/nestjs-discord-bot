@@ -17,6 +17,7 @@ export class SchedulerService {
     const messageTargets = [
       { channelId: '1340003785166032966', userId: '1293243416838410322' }, // User 1 in Channel 1
       { channelId: '1340004234208350258', userId: '1159466299747999854' }, // User 2 in Channel 2
+      { channelId: '1340007475708956682', userId: '1342084928182943835' }, // User 2 in Channel 2
     ];
 
     for (const target of messageTargets) {
