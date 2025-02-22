@@ -5,6 +5,8 @@ import { BotModule } from './bot/bot.module';
 import { ListenersModule } from './listenrs/listenrs.module';
 import { CommandsModule } from './commands/commands.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { TasksModule } from './tasks/tasks.module';
+import { StatusMasterModule } from './status_master/status_master.module';
 
 @Module({
   imports: [
@@ -30,12 +32,16 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         username: config.get('SUPABASE_DB_USER'),
         password: config.get('SUPABASE_DB_PASSWORD'),
         database: config.get('SUPABASE_DB_NAME'),
-        port: config.get('SUPABASE_DB_PORT')
+        port: config.get('SUPABASE_DB_PORT'),
+        autoLoadEntities: true,
+        synchronize: true,
       })
     }),
     BotModule,
     ListenersModule,
-    CommandsModule, // ✅ Import it here
+    CommandsModule,
+    TasksModule,
+    StatusMasterModule, // ✅ Import it here
   ],
 })
 export class AppModule {}
