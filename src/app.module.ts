@@ -7,6 +7,7 @@ import { CommandsModule } from './commands/commands.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TasksModule } from './tasks/tasks.module';
 import { StatusMasterModule } from './status_master/status_master.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -41,7 +42,8 @@ import { StatusMasterModule } from './status_master/status_master.module';
     ListenersModule,
     CommandsModule,
     TasksModule,
-    StatusMasterModule, // ✅ Import it here
+    StatusMasterModule,
+    UsersModule, // ✅ Import it here
   ],
 })
 export class AppModule {}
