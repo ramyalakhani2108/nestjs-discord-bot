@@ -30,5 +30,4 @@ export class BotGateway implements OnModuleInit {
 
     await this.client.login(token);
   }
-
 }

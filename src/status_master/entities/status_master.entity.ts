@@ -1,5 +1,6 @@
-import { Column, CreateDateColumn, DeleteDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { Column, CreateDateColumn, DeleteDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 import { Status } from "../enums/status.enum";
+import { UserRequests } from "src/users/entities/user-request.entity";
 
 @Entity('status_master')
 export class StatusMaster {
@@ -26,5 +27,8 @@ export class StatusMaster {
 
     @DeleteDateColumn()
     deletedAt: Date;
+
+    @OneToMany(() => UserRequests, (userRequest) => userRequest.status)
+    userRequests: UserRequests[];
 
 }
