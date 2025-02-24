@@ -19,7 +19,12 @@ export class BotService {
       
       const aiResponse = await this.generateResponse(userInput);
 
-      await message.channel.send(aiResponse);
+      try{
+
+        await message.channel.send(aiResponse);
+      }catch {
+        await message.channel.send('something went wrong');
+      }
     }
   }
 
