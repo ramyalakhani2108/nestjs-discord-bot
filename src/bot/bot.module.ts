@@ -5,6 +5,7 @@ import { PingCommand } from '../commands/ping.command';
 import { SchedulerService } from './services/scheduler.service';
 import { ListenersModule } from 'src/listenrs/listenrs.module';
 import { CommandsModule } from 'necord';
+import { BotService } from './services/bot.service';
 
 @Module({
   imports: [
@@ -13,6 +14,6 @@ import { CommandsModule } from 'necord';
     ListenersModule,
     CommandsModule
   ],
-  providers: [SchedulerService],
+  providers: [SchedulerService, BotService],
 })
 export class BotModule {}

@@ -28,6 +28,7 @@
     "@nestjs/schedule": "^5.0.1",
     "@nestjs/typeorm": "^11.0.0",
     "@nestjs/websockets": "^11.0.10",
+    "axios": "^1.7.9",
     "crypto": "^1.0.1",
     "discord.js": "^14.18.0",
     "necord": "^6.8.7",
