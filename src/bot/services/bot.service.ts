@@ -22,8 +22,8 @@ export class BotService {
       try{
 
         await message.channel.send(aiResponse);
-      }catch {
-        await message.channel.send('something went wrong');
+      }catch (err) {
+        await message.channel.send('something went wrong! ask data within 4000 characters please....🙃');
       }
     }
   }
