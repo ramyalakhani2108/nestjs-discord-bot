@@ -22,6 +22,7 @@ import { UsersModule } from './users/users.module';
         'GuildMembers',
         'GuildMessages',
         'MessageContent', 
+        'DirectMessages'
       ],
     }),
     TypeOrmModule.forRootAsync({
