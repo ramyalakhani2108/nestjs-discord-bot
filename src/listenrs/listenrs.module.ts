@@ -14,6 +14,7 @@ import { Client, GatewayIntentBits } from 'discord.js';
             GatewayIntentBits.GuildMembers,
             GatewayIntentBits.GuildMessages,
             GatewayIntentBits.MessageContent, // 👈 Required if you want to read messages
+            GatewayIntentBits.DirectMessages, // 👈 Required if you want to read messages
           ],
         });
       },
