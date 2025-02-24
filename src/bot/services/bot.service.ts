@@ -19,7 +19,12 @@ export class BotService {
       
       const aiResponse = await this.generateResponse(userInput);
 
-      await message.channel.send(aiResponse);
+      try{
+
+        await message.channel.send(aiResponse);
+      }catch (err) {
+        await message.channel.send('something went wrong! ask data within 4000 characters please....🙃');
+      }
     }
   }
 
